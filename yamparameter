@@ -17,3 +17,11 @@ Parameters:
       - t2.micro
       - t2.small
     ConstraintDescription: must be a valid EC2 instance type.
+   DBPwd:
+    NoEcho: true
+    Description: The database admin account password (won't be echoed)
+    Type: String
+  KeyName:
+    Description: Name of an existing EC2 KeyPair to enable SSH access to the instances. Linked to AWS Parameter
+    Type: AWS::EC2::KeyPair::KeyName
+    ConstraintDescription: must be the name of an existing EC2 KeyPair.
